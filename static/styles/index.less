@@ -1,6 +1,7 @@
 @blue: #5096E4;
 @black: #555;
 @grey: #777;
+@light: #dfdfdf;
 @white: #FFF;
 
 html, body {
@@ -15,7 +16,7 @@ header {
 	background: @blue;
 	text-align: center;
 	min-height: 100px;
-	margin: 0;
+	margin: 0 0 35px 0;
 	padding: 50px 0 0 0;
 
 	h1 {
@@ -54,6 +55,7 @@ header {
 		list-style: none;
 		font-family: 'museo-sans', sans-serif;
 		font-weight: 100;
+		text-transform: uppercase;
 		margin: 0;
 		padding: 0;
 
@@ -75,26 +77,59 @@ header {
 }
 
 section {
-	width: 960px;
-	margin: 0 auto;
-	margin-top: 50px;
+	border-bottom: 1px solid @light;
+
+	.wrapper {
+		width: 960px;
+		margin: 0 auto;
+		padding: 25px 0;
+	}
 
 	h1 {
 		color: @black;
 		font-family: 'museo-slab', serif;
+		font-size: 36px;
 		font-weight: 900;
+	}
+
+	h2 {
+		color: @blue;
+		font-family: 'museo-sans', sans-serif;
+		font-size: 24px;
+		font-weight: 100;
+	}
+
+	h3 {
+		color: @grey;
+		font-family: 'museo-sans', sans-serif;
+		font-size: 18px;
+		font-weight: 700;
 	}
 
 	p {
 		color: @grey;
 		font-family: 'museo-sans', sans-serif;
+		font-size: 18px;
 		font-weight: 100;
 		margin: 10px 0;
 		padding: 0;
 	}
+
+	.left {
+		float: left;
+		width: 400px;
+	}
+
+	.right {
+		float: right;
+		width: 400px;
+	}
 }
 
-.left {
-	float: left;
-	width: 400px;
+section:nth-child(2n-1) {
+	background: url('../images/grain_bg.png');
+}
+
+.clearfix {
+	clear: both;
 }

@@ -4,12 +4,12 @@
 	var originalPostition = $('nav').offset().top;
 	$(window).scroll(function() {
 		var position = $('nav').offset().top,
-			docScroll = $(document).scrollTop();
+			scroll = $(document).scrollTop();
 
-		if (position <= docScroll ) {
+		if (position <= scroll) {
 			$('nav').addClass('fixed');
 		}
-		if (docScroll <= originalPostition) {
+		if (scroll <= originalPostition) {
 			$('nav').removeClass('fixed');
 		}
 	});
