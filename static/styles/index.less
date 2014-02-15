@@ -124,6 +124,59 @@ section {
 		float: right;
 		width: 400px;
 	}
+
+	.highlights {
+		background: @light;
+		text-align: center;
+		position: relative;
+		margin-top: 50px;
+		padding: 15px 0;
+
+		h3 {
+			color: @grey;
+			font-size: 24px;
+			font-weight: 100;
+			text-transform: uppercase;
+			padding-bottom: 25px;
+		}
+
+		.sub-highlight {
+			color: @grey;
+			float: left;
+			display: inline-block;
+			width: 320px;
+
+			p {
+				color: @grey;
+			}
+
+			span {
+				font-size: 48px;
+				padding: 15px;
+			}
+		}
+	}
+
+	/* Kudos to http://nicolasgallagher.com/pure-css-speech-bubbles/demo/ */
+	.highlights:before {
+		content: "";
+		position: absolute;
+		top: -75px;
+		left: 200px;
+		border-width: 75px 150px 0 0;
+		border-style: solid;
+		border-color: transparent @light;
+	}
+
+	.highlights:after {
+		content: "";
+		position: absolute;
+		top: -75px;
+		left: 315px;
+		border-width: 75px 35px 0 0;
+		border-style: solid;
+		border-color: transparent @white;
+	}
 }
 
 section:nth-child(2n-1) {
