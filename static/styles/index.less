@@ -100,10 +100,9 @@ section {
 	}
 
 	h3 {
-		color: @grey;
-		font-family: 'museo-sans', sans-serif;
+		font-family: 'museo-slab', sans-serif;
 		font-size: 18px;
-		font-weight: 700;
+		font-weight: 300;
 	}
 
 	p {
@@ -123,6 +122,47 @@ section {
 	.right {
 		float: right;
 		width: 450px;
+	}
+
+	#chart_titles {
+		color: @white;
+		position: absolute;
+		top: 0;
+
+		h3 {
+			position: absolute;
+		}
+
+		h3:nth-child(1) {
+			.rotate(40deg);
+			top: 65px;
+			left: 265px;
+		}
+
+		h3:nth-child(2) {
+			.rotate(130deg);
+			top: 235px;
+			left: 255px;
+		}
+
+		h3:nth-child(3) {
+			.rotate(235deg);
+			top: 225px;
+			left: 75px;
+		}
+
+		h3:nth-child(4) {
+			.rotate(320deg);
+			top: 60px;
+			left: 125px;
+		}
+
+		.rotate(@deg) {
+			-webkit-transform: rotate(@deg);
+			-moz-transform: rotate(@deg);
+			-ms-transform: rotate(@deg);
+			-o-transform: rotate(@deg);
+		}
 	}
 
 	.highlights {
@@ -158,25 +198,25 @@ section {
 	}
 
 	/* Kudos to http://nicolasgallagher.com/pure-css-speech-bubbles/demo/ */
-	.highlights:before {
-		content: "";
-		position: absolute;
-		top: -75px;
-		left: 200px;
-		border-width: 75px 150px 0 0;
-		border-style: solid;
-		border-color: transparent @light;
-	}
+	// .highlights:before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: -75px;
+	// 	left: 400px;
+	// 	border-width: 75px 0 0 150px;
+	// 	border-style: solid;
+	// 	border-color: transparent @light;
+	// }
 
-	.highlights:after {
-		content: "";
-		position: absolute;
-		top: -75px;
-		left: 315px;
-		border-width: 75px 35px 0 0;
-		border-style: solid;
-		border-color: transparent @white;
-	}
+	// .highlights:after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: -75px;
+	// 	left: 400px;
+	// 	border-width: 75px 0 0 35px;
+	// 	border-style: solid;
+	// 	border-color: transparent @white;
+	// }
 }
 
 section:nth-child(2n-1) {
@@ -185,4 +225,8 @@ section:nth-child(2n-1) {
 
 .clearfix {
 	clear: both;
+}
+
+.relative {
+	position: relative;
 }
