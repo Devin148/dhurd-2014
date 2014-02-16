@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     watch: {
       styles: {
         files: ['static/styles/**/*.less', 'static/js/*.js'],
-        tasks: ['jshint', 'less'],
+        tasks: ['less', 'jshint'],
         options: {
           nospawn: true
         }
