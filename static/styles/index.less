@@ -1,4 +1,5 @@
 @blue: #5096E4;
+@orange: #F6B53B;
 @black: #555;
 @grey: #777;
 @lightgrey: #b9b9b9;
@@ -78,7 +79,9 @@ header {
 }
 
 section {
+	color: @grey;
 	border-bottom: 1px solid @light;
+	padding: 25px 0;
 
 	&:nth-child(2n-1) {
 		background: url('../images/grain_bg.png');
@@ -92,9 +95,9 @@ section {
 
 	h1 {
 		color: @black;
-		font-family: 'museo-slab', serif;
-		font-size: 36px;
-		font-weight: 900;
+		font-family: 'museo', serif;
+		font-size: 48px;
+		font-weight: 100;
 	}
 
 	h2 {
@@ -105,14 +108,21 @@ section {
 	}
 
 	h3 {
+		color: @grey;
+		font-family: 'museo-slab', sans-serif;
+		font-size: 24px;
+		font-weight: 100;
+		text-transform: uppercase;
+	}
+
+	h4 {
 		color: @lightgrey;
 		font-family: 'museo-slab', sans-serif;
 		font-size: 24px;
-		font-weight: 700;
+		font-weight: 100;
 	}
 
 	p {
-		color: @grey;
 		font-family: 'museo-sans', sans-serif;
 		font-size: 18px;
 		font-weight: 100;
@@ -123,46 +133,51 @@ section {
 	.left {
 		float: left;
 		width: 450px;
+		padding: 15px 0;
 	}
 
 	.right {
 		float: right;
 		width: 450px;
+		padding: 15px 0;
 	}
 
 	#chart_titles {
 		position: absolute;
 		top: 0;
 
-		h3 {
+		h6 {
 			color: @white;
+			font-family: 'museo-slab', sans-serif;
 			position: absolute;
 			font-size: 18px;
-			font-weight: 300;
+			font-weight: 100;
+			width: 150px;
+			text-align: center;
 		}
 
-		h3:nth-child(1) {
+		h6:nth-child(1) {
 			.rotate(40deg);
-			top: 65px;
-			left: 265px;
+			top: 145px;
+			left: 220px;
 		}
 
-		h3:nth-child(2) {
+		h6:nth-child(2) {
 			.rotate(130deg);
-			top: 235px;
-			left: 255px;
+			top: 320px;
+			left: 245px;
 		}
 
-		h3:nth-child(3) {
-			.rotate(235deg);
-			top: 225px;
-			left: 75px;
+		h6:nth-child(3) {
+			.rotate(-130deg);
+			top: 320px;
+			left: 55px;
 		}
 
-		h3:nth-child(4) {
-			.rotate(320deg);
-			top: 60px;
-			left: 125px;
+		h6:nth-child(4) {
+			.rotate(-40deg);
+			top: 145px;
+			left: 80px;
 		}
 
 		.rotate(@deg) {
@@ -175,28 +190,16 @@ section {
 
 	.highlights {
 		background: @light;
+		color: @grey;
 		text-align: center;
 		position: relative;
 		margin-top: 25px;
 		padding: 15px 0;
 
-		h3 {
-			color: @grey;
-			font-size: 24px;
-			font-weight: 100;
-			text-transform: uppercase;
-			padding-bottom: 25px;
-		}
-
 		.sub-highlight {
-			color: @grey;
 			float: left;
 			display: inline-block;
 			width: 320px;
-
-			p {
-				color: @grey;
-			}
 
 			span {
 				font-size: 48px;
@@ -224,10 +227,6 @@ section {
 		// 	border-style: solid;
 		// 	border-color: transparent @white;
 		// }
-	}
-
-	.content {
-		padding: 10px 0 50px 0;
 	}
 
 	ul.chart {
@@ -277,4 +276,8 @@ section {
 
 .relative {
 	position: relative;
+}
+
+.padded-content {
+	padding: 25px 0;
 }
