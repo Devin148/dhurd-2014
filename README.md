@@ -15,7 +15,7 @@ Once all requirements are installed, run
 
     grunt
 
-which will default to watching for jhint and less.
+which will default to watching for jshint and less.
 
 The index file will look for `static/styles/*.css` files, so some form of `grunt` or `grunt less` is required to view changes.
 
