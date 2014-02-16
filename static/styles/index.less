@@ -80,6 +80,10 @@ header {
 section {
 	border-bottom: 1px solid @light;
 
+	&:nth-child(2n-1) {
+		background: url('../images/grain_bg.png');
+	}
+
 	.wrapper {
 		width: 960px;
 		margin: 0 auto;
@@ -199,32 +203,32 @@ section {
 				padding: 15px;
 			}
 		}
+
+		/* Kudos to http://nicolasgallagher.com/pure-css-speech-bubbles/demo/ */
+		// &:before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: -75px;
+		// 	left: 400px;
+		// 	border-width: 75px 0 0 150px;
+		// 	border-style: solid;
+		// 	border-color: transparent @light;
+		// }
+
+		// &:after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: -75px;
+		// 	left: 400px;
+		// 	border-width: 75px 0 0 35px;
+		// 	border-style: solid;
+		// 	border-color: transparent @white;
+		// }
 	}
 
 	.content {
 		padding: 10px 0 50px 0;
 	}
-
-	/* Kudos to http://nicolasgallagher.com/pure-css-speech-bubbles/demo/ */
-	// .highlights:before {
-	// 	content: "";
-	// 	position: absolute;
-	// 	top: -75px;
-	// 	left: 400px;
-	// 	border-width: 75px 0 0 150px;
-	// 	border-style: solid;
-	// 	border-color: transparent @light;
-	// }
-
-	// .highlights:after {
-	// 	content: "";
-	// 	position: absolute;
-	// 	top: -75px;
-	// 	left: 400px;
-	// 	border-width: 75px 0 0 35px;
-	// 	border-style: solid;
-	// 	border-color: transparent @white;
-	// }
 
 	ul.chart {
 		border-right: 1px solid @black;
@@ -265,10 +269,6 @@ section {
 			padding: 25px 0;
 		}
 	}
-}
-
-section:nth-child(2n-1) {
-	background: url('../images/grain_bg.png');
 }
 
 .clearfix {
