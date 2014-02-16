@@ -1,7 +1,8 @@
 @blue: #5096E4;
 @black: #555;
 @grey: #777;
-@light: #dfdfdf;
+@lightgrey: #b9b9b9;
+@light: #dbdbdb;
 @white: #FFF;
 
 html, body {
@@ -100,9 +101,10 @@ section {
 	}
 
 	h3 {
+		color: @lightgrey;
 		font-family: 'museo-slab', sans-serif;
-		font-size: 18px;
-		font-weight: 300;
+		font-size: 24px;
+		font-weight: 700;
 	}
 
 	p {
@@ -125,12 +127,14 @@ section {
 	}
 
 	#chart_titles {
-		color: @white;
 		position: absolute;
 		top: 0;
 
 		h3 {
+			color: @white;
 			position: absolute;
+			font-size: 18px;
+			font-weight: 300;
 		}
 
 		h3:nth-child(1) {
@@ -197,6 +201,10 @@ section {
 		}
 	}
 
+	.content {
+		padding: 10px 0 50px 0;
+	}
+
 	/* Kudos to http://nicolasgallagher.com/pure-css-speech-bubbles/demo/ */
 	// .highlights:before {
 	// 	content: "";
@@ -217,6 +225,46 @@ section {
 	// 	border-style: solid;
 	// 	border-color: transparent @white;
 	// }
+
+	ul.chart {
+		border-right: 1px solid @black;
+		list-style: none;
+		float: left;
+		font-family: 'museo-sans', sans-serif;
+		font-weight: 100;
+		font-size: 12px;
+		line-height: 50px;
+		text-align: right;
+		text-transform: uppercase;
+		width: 100px;
+		margin: 0;
+		padding: 0 10px 0 0;
+	}
+
+	.bar-graph {
+		float: left;
+		width: 350px;
+
+		div {
+			background: @blue;
+			float: left;
+			height: 25px;
+			width: 100%;
+			margin: 12px;
+		}
+	}
+
+	.employment {
+		text-align: center;
+
+		img {
+			border: none;
+			outline: none;
+			display: block;
+			margin: 0 auto;
+			padding: 25px 0;
+		}
+	}
 }
 
 section:nth-child(2n-1) {
