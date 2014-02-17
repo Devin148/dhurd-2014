@@ -30,3 +30,9 @@ In order to view correct fonts, be sure to access dhurd.com through localhost or
 ## Testing
 
 More to come...
+
+## Future Updates
+
+- Mobile
+- Probably a brand new design when I get sick of this one
+- Better JS structuring
