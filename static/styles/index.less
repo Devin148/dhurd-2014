@@ -6,6 +6,13 @@
 @light: #dbdbdb;
 @white: #FFF;
 
+@countertop: #74bcff;
+@jimmy: #ff0066;
+@neu: #ffba00;
+@zomg: #f00;
+@minecraft: #6edc70;
+@investor: #E397E6;
+
 html, body {
 	-webkit-font-smoothing: antialiased;
 	height: 100%;
@@ -284,6 +291,90 @@ section {
 			display: block;
 			margin: 0 auto;
 			padding: 25px 0;
+		}
+	}
+
+	.portfolio-item {
+		background: @light;
+		position: relative;
+		float: left;
+		margin: 30px 40px;
+		height: 200px;
+		width: 400px;
+		border: 1px solid @light;
+
+		.item-title {
+			background: @black;
+			color: @blue;
+			min-width: 350px;
+			font-family: 'museo-slab', sans-serif;
+			font-size: 20px;
+			font-weight: 300;
+			padding: 10px 20px;
+			border-left: 10px solid @blue;
+			position: absolute;
+			left: -25px;
+			top: 15px;
+
+			.item-subtitle {
+				color: @light;
+				font-family: 'museo-sans', sans-serif;
+				font-size: 12px;
+			}
+		}
+
+		&#the_countertop_connection {
+			background: url('../images/portfolio/the_countertop_connection.png') no-repeat top left;
+			background-size: 100%;
+			.item-title {
+				color: @countertop;
+				border-color: @countertop;
+			}
+		}
+
+		&#jimmy_livery {
+			background: url('../images/portfolio/jimmy_livery.png') no-repeat top left;
+			background-size: 100%;
+			.item-title {
+				color: @jimmy;
+				border-color: @jimmy;
+			}
+		}
+
+		&#northeastern_social {
+			background: url('../images/portfolio/northeastern_social.png') no-repeat top left;
+			background-size: 100%;
+			.item-title {
+				color: @neu;
+				border-color: @neu;
+			}
+		}
+
+		&#zomg_clan {
+			background: url('../images/portfolio/zomg_clan.png') no-repeat top left;
+			background-size: 100%;
+			.item-title {
+				color: @zomg;
+				border-color: @zomg;
+			}
+		}
+
+		&#minecraft_server {
+			background: url('../images/portfolio/minecraft_server.png') no-repeat top left;
+			background-size: 100%;
+			.item-title {
+				color: @minecraft;
+				border-color: @minecraft;
+			}
+		}
+
+		&#the_modest_investor {
+			background: url('../images/portfolio/the_modest_investor.png') no-repeat top left;
+			background-size: 100%;
+			.item-title {
+				color: @investor;
+				border-color: @investor;
+			}
 		}
 	}
 
