@@ -68,7 +68,7 @@ header {
 		margin: 0;
 		top: 0;
 		bottom: inherit;
-		z-index: 100;
+		z-index: 9000;
 	}
 
 	ul {
@@ -97,12 +97,29 @@ header {
 }
 
 section {
+	background: @white;
 	color: @grey;
 	border-bottom: 1px solid @light;
+	position: relative;
 	padding: 25px 0;
 
 	&:nth-child(2n-1) {
 		background: url('../images/grain_bg.png');
+	}
+	&#about {
+		z-index: 500;
+	}
+
+	&#experiences {
+		z-index: 500;
+	}
+
+	&#portfolio {
+		z-index: 100;
+	}
+
+	&#contact {
+		z-index: 500;
 	}
 
 	.wrapper {
@@ -315,66 +332,91 @@ section {
 			position: absolute;
 			left: -25px;
 			top: 15px;
+			overflow: hidden;
 
 			.item-subtitle {
 				color: @light;
 				font-family: 'museo-sans', sans-serif;
 				font-size: 12px;
 			}
+
+			.item-hover {
+				color: @white;
+				display: none;
+				position: absolute;
+				line-height: 65px;
+				text-align: right;
+				padding-right: 15px;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 0;
+			}
+		}
+
+		.item-color(@color) {
+			.item-title {
+				color: @color;
+				border-color: @color;
+			}
+			.item-hover {
+				background: @color;
+			}
 		}
 
 		&#the_countertop_connection {
 			background: url('../images/portfolio/the_countertop_connection.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @countertop;
-				border-color: @countertop;
-			}
+			.item-color(@countertop);
 		}
 
 		&#jimmy_livery {
 			background: url('../images/portfolio/jimmy_livery.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @jimmy;
-				border-color: @jimmy;
-			}
+			.item-color(@jimmy);
 		}
 
 		&#northeastern_social {
 			background: url('../images/portfolio/northeastern_social.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @neu;
-				border-color: @neu;
-			}
+			.item-color(@neu);
 		}
 
 		&#zomg_clan {
 			background: url('../images/portfolio/zomg_clan.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @zomg;
-				border-color: @zomg;
-			}
+			.item-color(@zomg);
 		}
 
 		&#minecraft_server {
 			background: url('../images/portfolio/minecraft_server.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @minecraft;
-				border-color: @minecraft;
-			}
+			.item-color(@minecraft);
 		}
 
 		&#the_modest_investor {
 			background: url('../images/portfolio/the_modest_investor.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @investor;
-				border-color: @investor;
-			}
+			.item-color(@investor);
+		}
+	}
+
+	#portfolio_item_about {
+		background: url('../images/portfolio/the_countertop_connection.png') top left repeat fixed;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: -100%;
+		left: 0;
+		z-index: 200;
+
+		.background-layer {
+			background: rgba(0, 0, 0, .75);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 	}
 

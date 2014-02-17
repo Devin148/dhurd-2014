@@ -102,7 +102,7 @@
             type: 'POST',
             url: 'email.php',
             data: $form.serialize(),
-            success: function(e) {
+            success: function() {
                 // Man I hope I remember to remove this alert
                 // before publishing...
                 alert('Success!');
@@ -110,4 +110,52 @@
         });
         event.preventDefault();
     });
+})(jQuery);
+
+(function($) {
+    'use strict';
+
+    var $about = $('#portfolio_item_about'),
+        $item = $('.portfolio-item');
+
+    $about.click(function() {
+        $about.animate({
+            top: '-100%'
+        });
+    });
+
+    $item.hover(function() {
+        var $hover = $(this).find('.item-hover');
+        $hover.show();
+        $hover.animate({
+            width: '100%'
+        }, 200);
+    }, function() {
+        var $hover = $(this).find('.item-hover');
+        $hover.css('width', '0');
+        $hover.hide();
+    });
+
+    function updatePostion() {
+        var distance = $(window).scrollTop() - $item.offset().top,
+            y = -(distance / 10),
+            position = '50% ' + y + 'px';
+
+        $about.css('background-position', position);
+    }
+
+    $item.click(function() {
+        var id = $(this).attr('id');
+        $about.css('background', 'url("static/images/portfolio/' + id + '.png") top center no-repeat fixed');
+        updatePostion();
+
+        $(window).scroll(function() {
+            updatePostion();
+        });
+
+        $about.animate({
+            top: '0'
+        }, 500);
+    });
+
 })(jQuery);
