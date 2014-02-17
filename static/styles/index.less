@@ -153,6 +153,12 @@ section {
 		padding: 15px 0;
 	}
 
+	.center {
+		margin: 0 auto;
+		width: 450px;
+		text-align: center;
+	}
+
 	#chart_titles {
 		position: absolute;
 		top: 0;
@@ -280,6 +286,94 @@ section {
 			padding: 25px 0;
 		}
 	}
+
+	label {
+		display: none;
+	}
+
+	input, textarea {
+		color: @light;
+
+		&:focus {
+			color: @grey;
+			outline: none;
+		}
+	}
+
+	input[type='text'], input[type='email'] {
+		font-family: 'museo-sans', sans-serif;
+		font-size: 20px;
+		width: 100%;
+		margin: 20px 0;
+		padding: 10px;
+		.border-radius(10px);
+		box-shadow: none;
+		border: 1px solid @light;
+	}
+
+	input[type='radio'] {
+		display: none;
+
+		&:checked + label:before {
+			content: '\2022';
+			color: @light;
+			text-align: center;
+		}
+	}
+
+	input[type='radio'] + label {
+		display: inline-block;
+		position: relative;
+		font-size: 24px;
+		line-height: 24px;
+		font-family: 'museo-sans', sans-serif;
+		font-weight: 300;
+		margin: 20px 0;
+		padding: 0 30px;
+
+		&:before {
+			background: @white;
+			content: '';
+			position: absolute;
+			display: inline-block;
+			left: 0;
+			bottom: 0;
+			height: 25px;
+			width: 25px;
+			border: 1px solid @light;
+			.border-radius(15px);
+		}
+	}
+
+	textarea {
+		margin: 20px 0;
+		padding: 10px;
+		font-family: 'museo-sans', sans-serif;
+		font-size: 20px;
+		height: 150px;
+		width: 100%;
+		border: 1px solid @light;
+		.border-radius(10px);
+	}
+
+	button {
+		background: @light;
+		color: @grey;
+		font-family: 'museo-sans', sans-serif;
+		font-size: 20px;
+		border: none;
+		padding: 10px 50px;
+		.border-radius(5px);
+
+		&:hover {
+			background: @white;
+			color: @blue;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
 }
 
 .clearfix {
@@ -292,4 +386,11 @@ section {
 
 .padded-content {
 	padding: 25px 0;
+}
+
+.border-radius(@r) {	
+	-moz-border-radius: @r;
+	-webkit-border-radius: @r;
+	border-radius: @r;
+	-khtml-border-radius: @r;
 }

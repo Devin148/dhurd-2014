@@ -69,3 +69,45 @@
         startAngle = endAngle + 1;
     }
 })(jQuery);
+
+(function($) {
+    'use strict';
+
+    var $form = $('#contact_form'),
+        $input = $form.find(':text, input[type=email], textarea');
+
+    // Thanks RobertPitt
+    // http://stackoverflow.com/questions/3806227/how-to-remove-default-value-of-input-on-focus
+    $.fn.ToggleInputValue = function() {
+        return $(this).each(function() {
+            var input = $(this);
+            var defaultValue = input.val();
+
+            input.focus(function() {
+                if(input.val() === defaultValue) {
+                    input.val('');
+                }
+            }).blur(function() {
+                if(input.val().length === 0) {
+                    input.val(defaultValue);
+                }
+            });
+        });
+    };
+
+    $input.ToggleInputValue();
+
+    $form.submit(function(event) {
+        $.ajax({
+            type: 'POST',
+            url: 'email.php',
+            data: $form.serialize(),
+            success: function(e) {
+                // Man I hope I remember to remove this alert
+                // before publishing...
+                alert('Success!');
+            }
+        });
+        event.preventDefault();
+    });
+})(jQuery);

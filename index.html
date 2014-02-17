@@ -130,7 +130,23 @@
 
 	<section id="contact">
 		<div class="wrapper">
-			<h1>Contact</h1>
+			<div class="center">
+				<h1>Contact</h1>
+				<form class="contact-form" id="contact_form" method="post">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" value="Name">
+
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" value="Email Address">
+
+					<input type="radio" id="business" name="reason" value="business" checked><label for="business">Business</label>
+	                <input type="radio" id="pleasure" name="reason" value="pleasure"><label for="pleasure">Pleasure</label>
+					<label for="message">Message</label>
+					<textarea name="message" id="message" class="message">Message</textarea>
+
+					<button type="submit" class="button">Send</button>
+				</form>
+			</div>
 		</div>
 	</section>
 
