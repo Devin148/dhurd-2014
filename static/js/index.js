@@ -102,7 +102,7 @@
             type: 'POST',
             url: 'email.php',
             data: $form.serialize(),
-            success: function(e) {
+            success: function() {
                 // Man I hope I remember to remove this alert
                 // before publishing...
                 alert('Success!');
