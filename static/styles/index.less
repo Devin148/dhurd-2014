@@ -26,7 +26,7 @@ header {
 	background: @blue;// url('../images/cloud-alpha.png') no-repeat center center;
 	color: @white;
 	text-align: center;
-	height: 500px;
+	height: 90%;
 	padding: 150px 0 0 0;
 
 	.title-wrapper {
@@ -166,6 +166,10 @@ section {
 		text-align: center;
 	}
 
+	#chart, #chart_titles {
+		opacity: 0;
+	}
+
 	#chart_titles {
 		position: absolute;
 		top: 0;
@@ -273,12 +277,17 @@ section {
 		float: left;
 		width: 350px;
 
-		div {
-			background: @blue;
+		.bar-wrapper {
 			float: left;
 			height: 24px;
 			width: 100%;
 			margin: 13px;
+
+			div {
+				background: @blue;
+				height: 24px;
+				width: 0px;
+			}
 		}
 	}
 
