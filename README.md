@@ -33,6 +33,7 @@ More to come...
 
 ## Future Updates
 
+- Cleanup the modals, maybe some templating
 - Mobile
 - Probably a brand new design when I get sick of this one
 - Better JS structuring

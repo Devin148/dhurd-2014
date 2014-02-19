@@ -347,58 +347,51 @@ section {
 			}
 		}
 
+		.colorize(@color) {
+			.item-title {
+				color: @color;
+				border-color: @color;
+			}
+			&:hover {
+				border-color: @color;
+				cursor: pointer;
+			}
+		}
+
 		&#the_countertop_connection {
 			background: url('../images/portfolio/the_countertop_connection.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @countertop;
-				border-color: @countertop;
-			}
+			.colorize(@countertop);
 		}
 
 		&#jimmy_livery {
 			background: url('../images/portfolio/jimmy_livery.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @jimmy;
-				border-color: @jimmy;
-			}
+			.colorize(@jimmy);
 		}
 
 		&#northeastern_social {
 			background: url('../images/portfolio/northeastern_social.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @neu;
-				border-color: @neu;
-			}
+			.colorize(@neu);
 		}
 
 		&#zomg_clan {
 			background: url('../images/portfolio/zomg_clan.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @zomg;
-				border-color: @zomg;
-			}
+			.colorize(@zomg);
 		}
 
 		&#minecraft_server {
 			background: url('../images/portfolio/minecraft_server.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @minecraft;
-				border-color: @minecraft;
-			}
+			.colorize(@minecraft);
 		}
 
 		&#the_modest_investor {
 			background: url('../images/portfolio/the_modest_investor.png') no-repeat top left;
 			background-size: 100%;
-			.item-title {
-				color: @investor;
-				border-color: @investor;
-			}
+			.colorize(@investor);
 		}
 	}
 
@@ -488,6 +481,63 @@ section {
 		&:focus {
 			outline: none;
 		}
+	}
+}
+
+#countertop_modal .md-content {
+	background: url('../images/portfolio/the_countertop_connection.png') no-repeat top left;
+	background-size: 100%;
+}
+
+#jimmy_modal .md-content {
+	background: url('../images/portfolio/jimmy_livery.png') no-repeat top left;
+	background-size: 100%;
+}
+
+#neu_modal .md-content {
+	background: url('../images/portfolio/northeastern_social.png') no-repeat top left;
+	background-size: 100%;
+}
+
+#zomg_modal .md-content {
+	background: url('../images/portfolio/zomg_clan.png') no-repeat top left;
+	background-size: 100%;
+}
+
+#minecraft_modal .md-content {
+	background: url('../images/portfolio/minecraft_server.png') no-repeat top left;
+	background-size: 100%;
+}
+
+#investor_modal .md-content {
+	background: url('../images/portfolio/the_modest_investor.png') no-repeat top left;
+	background-size: 100%;
+}
+
+.md-content {
+	height: 500px;
+	width: 700px;
+	margin: 0;
+	padding: 0;
+	.border-radius(0px);
+
+	button {
+		background: rgba(0, 0, 0, .50);
+		border: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	div {
+		background: rgba(0, 0, 0, .70);
+		color: @white;
+		position: absolute;
+		font-family: 'museo-sans', sans-serif;
+		font-size: 14px;
+		width: 100%;
+		padding: 10px;
+		bottom: 0;
 	}
 }
 

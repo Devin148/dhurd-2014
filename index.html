@@ -4,9 +4,12 @@
 <script type="text/javascript" src="//use.typekit.net/vjo3jpy.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<link rel="stylesheet" type="text/css" href="static/styles/index.css">
 <link rel="stylesheet" type="text/css" href="static/styles/lib/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="static/styles/lib/ionicons.css">
+<link rel="stylesheet" type="text/css" href="static/styles/lib/nifty-modal.css" />
+
+<link rel="stylesheet" type="text/css" href="static/styles/index.css">
+
 </head>
 
 <body>
@@ -30,6 +33,64 @@
 			</ul>
 		</nav>
 	</header>
+
+	<div class="md-modal md-effect-16" id="countertop_modal">
+		<div class="md-content">
+			<div>
+				<p>The Countertop Connection is a small company out of Uxbridge, MA, and a family friend. They
+					sought me out during my first year of college to update their website to look more modern
+					and hopefully draw in more customers.</p>
+				<p>The goal of creating this site was to keep the same general style and copy as the site before it.
+					They wanted a logo, nav bar, and a bunch of images across the site. But, when all was said and done
+					they had a few more ideas for me to implement. We added social media, links to the granite manufacturers,
+					and a page for them to display new granite colors as they came out.</p>
+			</div>
+			<button class="md-close">X</button>
+		</div>
+	</div>
+
+	<div class="md-modal md-effect-16" id="jimmy_modal">
+		<div class="md-content">
+			<div></div>
+			<button class="md-close">X</button>
+		</div>
+	</div>
+
+	<div class="md-modal md-effect-16" id="neu_modal">
+		<div class="md-content">
+			<div></div>
+			<button class="md-close">X</button>
+		</div>
+	</div>
+
+	<div class="md-modal md-effect-16" id="zomg_modal">
+		<div class="md-content">
+			<div>
+				<p>ZOMG Clan has been a project for my friends and I since the middle of highschool.</p>
+				<p>It initially started out as a gaming clan for CS:S, but eventually spiralled into a site, then
+					a blog, and finally into social media. I was generally the manager for site development and
+					brand development on social media, although within the past year or so our efforts have died down.</p>
+				<p>The Facebook is still run by Pepi Simeonov, but until we have more time as a group to gather our
+					thoughts, the site will remain offline. And unfortunately I do not have pictures of any 'pretty' designs
+					within the past few years. And sadly the code from high school is not something I want to show off.</p>
+			</div>
+			<button class="md-close">X</button>
+		</div>
+	</div>
+
+	<div class="md-modal md-effect-16" id="minecraft_modal">
+		<div class="md-content">
+			<div></div>
+			<button class="md-close">X</button>
+		</div>
+	</div>
+
+	<div class="md-modal md-effect-16" id="investor_modal">
+		<div class="md-content">
+			<div></div>
+			<button class="md-close">X</button>
+		</div>
+	</div>
 
 	<section id="about">
 		<div class="wrapper">
@@ -130,38 +191,37 @@
 	<section id="portfolio">
 		<div class="wrapper">
 			<h1>Portfolio</h1>
-
-			<div class="portfolio-item" id="the_countertop_connection">
+			<div class="portfolio-item md-trigger" id="the_countertop_connection" data-modal="countertop_modal">
 				<div class="item-title">The Countertop Connection
 					<div class="item-subtitle">[2010] Custom design following previous site layout</div>
 				</div>
 			</div>
 
-			<div class="portfolio-item" id="jimmy_livery">
+			<div class="portfolio-item md-trigger" id="jimmy_livery" data-modal="jimmy_modal">
 				<div class="item-title">Jimmy Livery
 					<div class="item-subtitle">[2011] Custom design and SEO</div>
 				</div>
 			</div>
 
-			<div class="portfolio-item" id="northeastern_social">
+			<div class="portfolio-item md-trigger" id="northeastern_social" data-modal="neu_modal">
 				<div class="item-title">Northeastern Social
 					<div class="item-subtitle">[2013] Class project, design & development</div>
 				</div>
 			</div>
 
-			<div class="portfolio-item" id="zomg_clan">
+			<div class="portfolio-item md-trigger" id="zomg_clan" data-modal="zomg_modal">
 				<div class="item-title">ZOMG Clan
 					<div class="item-subtitle">[2007-2013] Mutliple iterations of design & development</div>
 				</div>
 			</div>
 
-			<div class="portfolio-item" id="minecraft_server">
+			<div class="portfolio-item md-trigger" id="minecraft_server" data-modal="minecraft_modal">
 				<div class="item-title">Minecraft Server
 					<div class="item-subtitle">[2010] Learning HTLM5 Canvas</div>
 				</div>
 			</div>
 
-			<div class="portfolio-item" id="the_modest_investor">
+			<div class="portfolio-item md-trigger" id="the_modest_investor" data-modal="investor_modal">
 				<div class="item-title">The Modest Investor
 					<div class="item-subtitle">[2012] Basic CMS and SEO, design by client</div>
 				</div>
@@ -191,13 +251,17 @@
 			</div>
 		</div>
 	</section>
+	<div class="md-overlay"></div>
 
 </body>
 
 <script type="text/javascript" src="static/js/lib/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="static/js/lib/underscore-min.js"></script>
-<script type="text/javascript" src="static/js/lib/bootstrap.min.js"></script>
+<!-- <script type="text/javascript" src="static/js/lib/bootstrap.min.js"></script> -->
 <script type="text/javascript" src="static/js/lib/jcanvas.min.js"></script>
+<!-- classie.js by @desandro: https://github.com/desandro/classie -->
+<script src="static/js/lib/classie.js"></script>
+<script src="static/js/lib/modalEffects.js"></script>
 
 <script type="text/javascript" src="static/js/index.js"></script>
 <script type="text/javascript" src="static/js/scroll.js"></script>
